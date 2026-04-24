@@ -12,3 +12,20 @@ Plan de cambios para la página de Nata:
 - Cuando se seleccione la hora preferida para la cita, mejor que sean horas predeterminadas, por ejemplo en un horario de 8:00 am a 8:00 pm, pero que entre que las opciones sean cada hora y media, de modo que si hay dos sesiones seguidas y la anterior dura 1h, tiene media hora para desplazarse a la siguiente terapia. Quiero que cuando algún usuario ya haya seleccionado un horario y se haya confirmado la cita, ya ese horario no aparezca disponible, así ellos ya saben que su agenda está ocupada en ese momento.
 - Quiero que cuando las personas le den en el botón "Agender este paquete" no los lleve directamente a whatsapp para verificar disponibilidad, sino que los baje al formulario de reservar tu cita y les seleccione directamente el paquete, quiero que el único redireccionamiento hacia whatsapp por ahora sea el de abajo a la derecha de "Escríbeme por Whatsapp", esto con el fin de hacer preguntas o consultas muy puntuales.
 - Quiero que la sección de "¿Tienes otra pregunta?" se conecte también a google y envíe un correo directamente al correo de Nata para ella responder, y sino, que puedan hacerlo también por medio de whatsapp, ofreciendo dos alternativas.
+
+---
+Cambios Pendientes:
+
+Ahora solo falta configurar las credenciales de Gmail para que el email funcione. Para eso Natalia necesita generar un App Password:
+
+Pasos para Natalia (5 min):
+
+1. Entrar a su cuenta Gmail → Gestionar tu cuenta de Google
+2. Seguridad → activar Verificación en dos pasos (si no está activa)
+3. Buscar Contraseñas de aplicaciones → crear una nueva
+4. Nombre: natalia-fisio → copiar la contraseña de 16 caracteres
+
+Cuando la tengas, la guardamos así en Netlify:
+
+netlify env:set GMAIL_USER nataliabj777@gmail.com
+netlify env:set GMAIL_APP_PASSWORD xxxx-xxxx-xxxx-xxxx
